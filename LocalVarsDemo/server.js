@@ -1,10 +1,13 @@
-﻿var http = require('http');
+﻿var express = require('express'),
+    app = express();
 var port = process.env.port || 1337;
 
-var server = http.createServer();
-server.listen(port);
+//serve static assets
+app.use(express.static(__dirname + '/static'));
 
-server.on('request', function (request, response) {
-    response.write('HEY!');
-    response.end();
+//map functions to routes
+app.get('/express', function (req, res) {
+    res.send('Hey from Express!')
 });
+
+var server = app.listen(port);
