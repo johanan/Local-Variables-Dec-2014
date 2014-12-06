@@ -1,0 +1,10 @@
+{
+  "name": "LocalVarsDemo",
+  "version": "0.0.0",
+  "description": "LocalVarsDemo",
+  "main": "server.js",
+  "author": {
+    "name": "jjohanan",
+    "email": ""
+  }
+}
